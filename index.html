@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loadout Command</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="menuOverlay" class="panel">
+      <div class="panel-inner">
+        <p class="eyebrow">OPERATION READY</p>
+        <h1>Loadout Command</h1>
+        <p class="subtitle">Choose your starting weapons, then drop into the arena.</p>
+
+        <div id="weaponGrid"></div>
+
+        <div class="selection-summary">
+          <span>Selected loadout</span>
+          <div id="selectedList">Pistol</div>
+        </div>
+
+        <button id="startButton" type="button">Start Mission</button>
+      </div>
+    </div>
+
+    <div id="gameHud" class="hidden">
+      <div id="crosshair" aria-hidden="true"></div>
+
+      <div class="top-bar">
+        <div class="status-pill">
+          <span class="label">Health</span>
+          <strong id="healthValue">100</strong>
+        </div>
+        <div class="status-pill">
+          <span class="label">Weapon</span>
+          <strong id="weaponValue">Pistol</strong>
+        </div>
+        <div class="status-pill">
+          <span class="label">Loadout</span>
+          <strong id="loadoutValue">Pistol</strong>
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <div class="message-box">
+          <span id="missionText">Sweep the arena and eliminate hostiles.</span>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
